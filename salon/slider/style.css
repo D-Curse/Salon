@@ -5,19 +5,21 @@ body{
     display: flex;
     align-items: center;
     background: #fff
+    
 }
 
 .sliders{
     width: 100%;
-    height: 500px;
+    height: 100vh;
     border-radius: 10px;
     overflow-x: hidden;
 }
 
 .slides{
-    width: 300%;
-    height: 500px;
+    width: 500%;
+    height: 100%;
     display: flex;
+    
 }
 
 .slides input{
@@ -27,16 +29,18 @@ body{
 .slide{
     width: 20%;
     transition: 2s;
+    overflow: hidden;
 }
 
 .slide img{
     width: 100vw;
-    height: 500px;
+    height: 100%;
+    
 }
 
 .navigation-manual{
     position: absolute;
-    width: 800px;
+    width: 100%;
     margin-top: -40px;
     display: flex;
     justify-content: center;
@@ -75,16 +79,17 @@ body{
 .navigation-auto{
     position: absolute;
     display: flex;
-    width: 800px;
+    width: 100%;
     justify-content: center;
-    margin-top: 460px;
+    margin-top: -40px;
 }
 
 .navigation-auto div{
     border: 2px solid #fff;
+    background: white;
     padding:5px;
     border-radius: 10px;
-    transition:1s;
+    transition: 1s;
 }
 
 .navigation-auto div:not(:last-child){
