@@ -11,3 +11,7 @@
     font-family: 'Niveau Grotesk';
     src: url('./fonts/NiveauGrotesk.ttf');
 }
+
+html {
+    scroll-behavior: smooth;
+}
