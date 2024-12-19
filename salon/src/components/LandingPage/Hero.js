@@ -9,7 +9,7 @@ const Hero = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % heroSlides.length);
   };
 
-  // Automatic sliding every 5 seconds
+  // Automatic sliding every 10 seconds
   useEffect(() => {
     const slideInterval = setInterval(nextSlide, 10000); // Changed to 10 seconds
 
@@ -18,12 +18,12 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden w-full">
       <div className="absolute bottom-40 w-full text-center">
-        <p className="font-custom1 text-8xl">Good Looks</p>
+        <p className="font-custom1 text-8xl z-20">Good Looks</p>
       </div>
       <div
-        className="flex transition-all duration-[500ms] ease-in-out"
+        className="h-auto flex transition-all duration-[900ms] ease-in-out w-full"
         style={{
           transform: `translateX(-${currentSlide * 100}%)`,
         }}
@@ -33,7 +33,7 @@ const Hero = () => {
             key={slide.id}
             src={slide.src}
             alt={slide.alt}
-            className="w-full"
+            className="w-full h-full"
           />
         ))}
       </div>

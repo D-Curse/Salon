@@ -20,35 +20,17 @@ const Gallery = () => {
   ];
 
   return (
-    <div id="gallery" className="p-4">
-      {/* Flexbox Container with Vertical Listing */}
-      <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-between">
-        {/* List images vertically on small screens and horizontally on larger screens */}
-        <div className="flex flex-col sm:flex-row sm:flex-wrap w-full mb-4 sm:mb-0">
-          {data.slice(0, 8).map((item) => (
-            <div key={item.id} className="w-full sm:w-1/4 p-2">
-              <img
-                src={item.src}
-                alt={`img-${item.id}`}
-                className="w-full h-auto rounded-lg"
-              />
-            </div>
-          ))}
+    <div id="gallery" className="my-8 mx-[10%] flex flex-wrap">
+      {data.map((img) => (
+        <div 
+          key={img.id}
+          className='w-1/5 h-auto'
+        >
+          <img 
+            src={img.src}
+          />
         </div>
-        
-        {/* List images horizontally for the second part */}
-        <div className="flex sm:flex-row flex-col sm:w-full mb-4 sm:mb-0">
-          {data.slice(8).map((item) => (
-            <div key={item.id} className="w-full sm:w-1/4 p-2">
-              <img
-                src={item.src}
-                alt={`img-${item.id}`}
-                className="w-full h-auto rounded-lg"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

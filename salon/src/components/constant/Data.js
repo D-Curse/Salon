@@ -59,6 +59,11 @@ export const heroSlides = [
       src: "img/hero/slide3.jpg",
       alt: "Slide Three",
     },
+    {
+        id: 4,
+        src: "img/hero/slide4.jpg",
+        alt: "Slide Four",
+    },
 ];
   
 
