@@ -46,7 +46,7 @@ const List = () => {
                     {sub.services.map((service, index) => (
                         <li key={index} className="flex justify-between items-center text-lg text-black font-custom2">
                         <span className="mr-2">{service.name}</span>
-                        <span>{`$${service.price}`}</span>
+                        <span>{`₹${service.price}`}</span>
                         </li>
                     ))}
                 </ul>
